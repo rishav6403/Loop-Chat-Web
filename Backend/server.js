@@ -1,14 +1,25 @@
-const express = require("express");
+import express from "express";
+import dotenv from "dotenv";
+
+import authRoute from "./routes/authRoute.js";
+import connectToMongodb from "./db/connections.js";
+
 const app = express();
-const dotenv = require("dotenv")
-dotenv.config()
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 
-app.get("/", (req, res)=>{
-    return res.send("Hii from the server")
-})
+dotenv.config();
 
-app.listen(PORT, ()=>console.log(`Server started at ${PORT}`)
-)
+app.use(express.json())
+
+app.use("/api/auth", authRoute);
+
+app.get("/", (req, res) => {
+  return res.send("Hii from the server");
+});
 
 
+app.listen(PORT, () => {
+  connectToMongodb();
+
+  console.log(`Server started at ${PORT}`);
+});
