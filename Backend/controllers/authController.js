@@ -24,7 +24,7 @@ export const signup = async (req, res) => {
     const newUser = new User({
       fullName,
       userName,
-      password,
+      password:hashedPassword,
       gender,
       profilePic: gender === "male" ? boyProfilePic : girlProfilePic,
     });
