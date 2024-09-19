@@ -1,4 +1,4 @@
-import React from 'react';
+import {Link} from 'react-router-dom'
 
 const Login = () => {
   return (
@@ -13,7 +13,7 @@ const Login = () => {
           </div>
           <div className="col-sm-6  d-flex flex-column justify-content-center align-items-center">
             
-          <form className="mt-4">
+          <form className="mt-4 w-100 px-4">
             <label
               htmlFor="username"
               className="font-semibold fs-5 ms-2"
@@ -21,9 +21,8 @@ const Login = () => {
               Username
             </label>
           <div className="container">
-            <input id="loginInput"
+            <input className="loginInput rounded"
               type="text"
-              className="rounded"
               placeholder="Enter username"
             />
           </div>
@@ -34,15 +33,14 @@ const Login = () => {
               Password
             </label>
           <div className="container">
-            <input id="loginInput"
-              type="text"
-              className=" rounded"
+            <input className="loginInput rounded"
+              type="password"
               placeholder="Enter password"
             />
           </div>
-          <div className=" d-flex justify-content-between align-items-center" id='finalBtns'>
-          <button className='btn btn-primary rounded-pill px-4 py-2'>Login</button>
-          <a href="#">Didn't have an accout?</a>
+          <div className=" d-flex justify-content-between align-items-center">
+          <button className='btn btn-primary rounded-pill px-4 py-2 ms-2'>Login</button>
+          <Link to={"/signup"} >Didn't have an accout?</Link>
           </div>
         </form>
         </div>

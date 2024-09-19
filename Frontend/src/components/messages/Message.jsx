@@ -16,7 +16,7 @@ const Message = () => {
       </div>
       <div className="bubbleContainer d-flex flex-column">
         <div className="px-2 pt-1 rounded-3 d-flex align-items-end" id="chatbox">
-          <p className="">You were the Chosen One! .</p>
+          <p className="">You were the Chosen One!</p>
         <small className="text-muted">12:45</small>
         </div>
       </div>

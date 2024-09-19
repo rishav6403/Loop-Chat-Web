@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const SignUp = () => {
   return (
     <>
@@ -11,7 +13,7 @@ const SignUp = () => {
           </div>
           <div className="col-sm-6  d-flex flex-column justify-content-center align-items-center">
             
-          <form className="mt-4">
+          <form className="mt-4 w-75">
             <label
               htmlFor="username"
               className="font-semibold fs-5 ms-2"
@@ -19,9 +21,8 @@ const SignUp = () => {
               Fullname
             </label>
           <div className="container">
-            <input id="signupInput"
+            <input className="signupInput rounded"
               type="text"
-              className="rounded"
               placeholder="Enter fullname"
             />
           </div>
@@ -32,9 +33,8 @@ const SignUp = () => {
               Username
             </label>
           <div className="container">
-            <input id="signupInput"
+            <input className="signupInput rounded"
               type="text"
-              className="rounded"
               placeholder="Enter username"
             />
           </div>
@@ -45,9 +45,8 @@ const SignUp = () => {
               Password
             </label>
           <div className="container">
-            <input id="signupInput"
-              type="text"
-              className=" rounded"
+            <input className="signupInput rounded"
+              type="password"
               placeholder="Enter password"
             />
           </div>
@@ -58,9 +57,8 @@ const SignUp = () => {
               Confirm Password
             </label>
           <div className="container">
-            <input id="signupInput"
-              type="text"
-              className="rounded"
+            <input className="signupInput rounded"
+              type="password"
               placeholder="Enter confirmpassword"
             />
           </div>
@@ -87,9 +85,9 @@ const SignUp = () => {
               </label>
             </div>
           </div>
-          <div className="mt-4 ms-3 d-flex justify-content-between align-items-center"id='finalBtns'>
+          <div className="mt-4 ms-3 d-flex justify-content-between align-items-center">
           <button className='btn btn-primary rounded-pill px-4 py-2'>Signup</button>
-          <a href="#">Already have an accout?</a>
+          <Link to={"/login"}>Already have an accout?</Link>
           </div>
         </form>
         </div>
