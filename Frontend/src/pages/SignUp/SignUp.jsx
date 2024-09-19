@@ -1,10 +1,10 @@
 const SignUp = () => {
   return (
     <>
-      <div className="container" id="signup-container">
+      <div className="container" id="Signup-container">
         <div className="row">
           <div className="col-sm-6 d-flex flex-column justify-content-center align-items-center">
-            <div>
+            <div id='heading'> 
             <h2>Create a Loop Chat Account</h2>
             <p className="fs-5 ">Enter your details</p>
             </div>
@@ -64,7 +64,7 @@ const SignUp = () => {
               placeholder="Enter confirmpassword"
             />
           </div>
-          <div className="genderBox">
+          <div className="genderBox d-flex gap-2">
             <div className="form-check ms-3">
               <input
                 className="form-check-input"
@@ -87,7 +87,7 @@ const SignUp = () => {
               </label>
             </div>
           </div>
-          <div className="mt-4 ms-3 d-flex justify-content-between align-items-center">
+          <div className="mt-4 ms-3 d-flex justify-content-between align-items-center"id='finalBtns'>
           <button className='btn btn-primary rounded-pill px-4 py-2'>Signup</button>
           <a href="#">Already have an accout?</a>
           </div>

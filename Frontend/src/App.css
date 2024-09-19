@@ -1,39 +1,116 @@
-body{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+#Signup-container {
+  background-color: rgb(255, 255, 255);
+  height: 550px;
+  border-radius: 20px;
 }
-.mainContainer{
-    height: 100vh;
-    background-color: rgb(221, 232, 241);
+#Login-container {
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
 }
-#signup-container{
-    background-color: rgb(255, 255, 255);
-    height: 550px;
-    border-radius: 20px;
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-#Login-container{
-    height: 300px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 20px;
+#signupInput,
+#loginInput {
+  width: 90%;
+  max-width: 450px;
+  height: 50px;
+  border: 1px solid rgb(121, 111, 111);
+  padding: 20px;
+  margin-bottom: 15px;
 }
-h2{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+#Home-container {
+  display: flex;
+  align-items: center;
+  height: 600px;
+  width: 70%;
+  border-radius: 20px;
 }
-#signupInput{
-    width: 450px;
-    height: 50px;
-    border: 1px solid rgb(121, 111, 111);
-    padding: 20px;
-    margin-bottom: 15px;
+#sideContainer {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  height: 570px;
+  width: 330px;
 }
 
-#loginInput{
-    width: 450px;
-    height: 50px;
-    border: 1px solid rgb(121, 111, 111);
-    padding: 20px;
-    margin-bottom: 15px;
+#messagesContainer {
+  overflow: auto;
+  align-items: center;
+  border-radius: 20px;
 }
+#home-container,
+#sideContainer,
+#messagesContainer {
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+#logoutContainer {
+  margin-right: 250px;
+}
+#mssginput {
+  padding: 11px;
+}
+#sendMessageButton {
+  right: 30px;
+  cursor: pointer;
+  color: gray;
+  font-size: 25px;
+}
+#sendMessageButton:hover {
+  color: green;
+}
+#aut {
+  max-height: 100%;
+  overflow: auto;
+}
+.chat-message {
+  display: flex;
+  .mssgBox{
+    max-width: 80%;
+  }
+}
+
+.chat-end {
+  justify-content: flex-end;
+  div#profileImage {order: 2;};
+  h6,
+  small {
+    text-align: end;
+  }
+  .bubbleContainer{
+    margin-right: 5px;
+  };
+  #chatbox{
+    background-color: #007bff;
+    color: honeydew;
+  }
+}
+
+.chat-start {
+  justify-content: flex-start;
+  .bubbleContainer{
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+   #chatbox{
+    background-color: rgb(255, 255, 255);
+  }
+
+}
+.chat-bubble {
+  border-radius: 0.5rem;
+}
+
+.bg-light {
+  background-color: #f5f6f7;
+}
+
+.bg-primary {
+  background-color: #007bff;
+  color: #ffffff;
+}
+

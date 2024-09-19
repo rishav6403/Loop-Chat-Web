@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import Sidebar from "../../components/sidebar/Sidebar";
+import MessagesContainer from "../../components/messages/MessagesContainer";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <div className="container " id="Home-container">
+        <div className="container d-flex">
+          <Sidebar />
+          <MessagesContainer/>
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default Home
+export default Home;

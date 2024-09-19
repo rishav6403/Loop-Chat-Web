@@ -1,5 +1,5 @@
 @media screen and (max-width : 994px) {
-    #loginInput{
+    #loginInput, #signupInput{
         width: 200px;
     }
     #finalBtns{
@@ -15,5 +15,14 @@
     #Login-container{
         height: 400px;
         margin: 0px 15px;
+    }
+    #Signup-container{
+        height: 550px;
+        margin: 0px 15px;
+    }
+}
+@media screen and (max-width : 576px){
+    #Signup-container{
+        height: 650px;
     }
 }
