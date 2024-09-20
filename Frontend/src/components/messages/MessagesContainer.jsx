@@ -4,7 +4,7 @@ import Messages from "./Messages";
 import { TiMessages } from "react-icons/ti";
 
 const MessagesContainer = () => {
-  let noChatSelected = false;
+  let noChatSelected = true;
 
   return (
     <>

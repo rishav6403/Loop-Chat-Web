@@ -1,28 +1,27 @@
-const GenderCheckBox = () => {
+const GenderCheckBox = ({onCheckBoxChange, selectedGender}) => {
   return (
     <>
-    <div className="genderBox d-flex gap-2">
-            <div className="form-check ms-3">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="flexRadioDefault"
-                checked
-              />
-              <label className="form-check-label" for="flexRadioDefault1">
-                Male
-              </label>
-            </div>
-            <div className="form-check flex flex-column ms-3">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="flexRadioDefault"
-              />
-              <label className="form-check-label" for="flexRadioDefault2">
-                Female
-              </label>
-            </div>
+    <div className="genderBox d-flex gap-2 ms-3">
+    <div className="form-check "  >
+    <label className="form-check-label" >
+    Male
+    <input className="form-check-input" type="checkbox" role="button"
+  checked = {selectedGender == "male"}
+  onChange={()=> onCheckBoxChange("male")}/>
+  </label>
+  
+  
+</div>
+<div className="form-check ">
+<label className={`form-check-label `}>
+    Female
+    <input className="form-check-input" type="checkbox" role="button" 
+  checked = {selectedGender == "female"}
+  onChange={()=> onCheckBoxChange("female")}/>
+  </label>
+  
+  
+</div>
           </div>
     </>
   )
