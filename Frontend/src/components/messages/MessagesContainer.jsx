@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Messageinput from "./Messageinput";
 import Messages from "./Messages";
 import { TiMessages } from "react-icons/ti";
+import useConversation from "../../zustand/useCoversation";
 
 const MessagesContainer = () => {
-  let noChatSelected = true;
+ const{selectedConversation, setSelectedConversation}   = useConversation();
+ useEffect(()=>{
+  return ()=> setSelectedConversation(null);
+
+ },[setSelectedConversation])
 
   return (
     <>
@@ -12,14 +17,14 @@ const MessagesContainer = () => {
         className="d-flex flex-column justify-content-between w-100"
         id="messagesContainer"
       >
-        {noChatSelected ? (
+        {!selectedConversation ? (
           <NoChatSelected />
         ) : (
           <>
-            <div className=" row w-100">
-              <div className=" w-100 bg-dark-subtle">
+            <div className=" row w-100 justify-content-between">
+              <div className="bg-dark-subtle">
                 <span className="fs-5 fw-semibold text-white">To: </span>
-                <span className="fs-4 fw-bold "> John Doe</span>
+                <span className="fs-4 fw-bold "> {selectedConversation.fullName}</span>
               </div>
             </div>
             <Messages />

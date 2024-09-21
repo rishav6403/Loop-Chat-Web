@@ -8,8 +8,8 @@ import messagesRoute from "./routes/messagesRoute.js";
 import userRoute from "./routes/userRoute.js"
 
 const app = express();
-const PORT = process.env.PORT || 8000;
 
+const PORT = process.env.PORT || 8000;
 dotenv.config();
 
 app.use(express.json());
@@ -19,9 +19,6 @@ app.use("/api/auth", authRoute);
 app.use("/api/messages", messagesRoute);
 app.use("/api/users", userRoute)
 
-app.get("/", (req, res) => {
-  return res.send("Hii from the server");
-});
 
 
 app.listen(PORT, () => {

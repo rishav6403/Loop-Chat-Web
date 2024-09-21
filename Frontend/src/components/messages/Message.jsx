@@ -1,14 +1,25 @@
 import React from "react";
+import { useAuthContext } from "../../context/AuthContext";
+import useConversation from "../../zustand/useCoversation";
+import { extractTime } from "../../utils/extractTime";
 
-const Message = () => {
+const Message = ({message}) => {
+const {authUser} = useAuthContext()
+const{selectedConversation} = useConversation();
+const formattedDateAndTime = extractTime(message.createdAt)
+const fromMe = message.senderId === authUser._id;
+const chatClassName = fromMe ? 'chat-end' : 'chat-start';
+const profilePic = fromMe ? authUser.profilePic : selectedConversation?.profilePic;
+
+
   return (
     <>
      <div className="container mt-2">
-  <div className="chat-message chat-end">
+  <div className={`chat-message ${chatClassName}`}>
     <div className="mssgBox d-flex">
       <div id="profileImage">
       <img
-        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+        src={profilePic}
         className="rounded-circle"
         alt="Avatar"
         style={{width:"40px", height:"40px"}}
@@ -16,8 +27,8 @@ const Message = () => {
       </div>
       <div className="bubbleContainer d-flex flex-column">
         <div className="px-2 pt-1 rounded-3 d-flex align-items-end" id="chatbox">
-          <p className="">You were the Chosen One!</p>
-        <small className="text-muted">12:45</small>
+          <p className="">{message.message}</p>
+        <small className="text-muted">{formattedDateAndTime}</small>
         </div>
       </div>
     </div>
