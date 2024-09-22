@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("./jakob-owens-TMxUnMAAwFA-unsplash.jpg");
+    background-image: url("./assets/images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
