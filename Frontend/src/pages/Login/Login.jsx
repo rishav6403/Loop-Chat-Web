@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useLogin from "../../hooks/useLogin";
+import Loader from "../../components/loader/Loader";
 
 const Login = () => {
   const [userName, setUserName] = useState("");
@@ -54,9 +55,7 @@ const Login = () => {
                   disabled = {loading}
                 >
                   {loading ? (
-                    <div className="spinner-border" role="status">
-                      <span className="visually-hidden">Loading...</span>
-                    </div>
+                    <Loader/>
                   ) : (
                     "Login"
                   )}

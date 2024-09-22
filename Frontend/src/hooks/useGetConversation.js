@@ -17,7 +17,7 @@ const getConversation = async ()=>{
         setConversations(data);
     } 
     catch (error) {
-        Toast.error(error.message)
+        toast.error(error.message)
     } finally{
         setLoading(false);
     }

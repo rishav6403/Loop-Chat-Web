@@ -1,6 +1,7 @@
 import React from "react";
 import { TbLogout2 } from "react-icons/tb";
 import useLogout from "../../hooks/useLogout";
+import Loader from "../loader/Loader";
 const Logout = () => {
   const { loading, logout } = useLogout();
   return <>
@@ -9,9 +10,7 @@ const Logout = () => {
           <TbLogout2 />
         </button>
       ) : (
-        <div className="spinner-border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
+        <Loader/>
       )}
   
 </>

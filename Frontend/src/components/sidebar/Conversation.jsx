@@ -1,16 +1,20 @@
 import React from "react";
 import { MDBBadge } from "mdb-react-ui-kit";
 import useConversation from "../../zustand/useCoversation";
+import { useSocketContext } from "../../context/SocketContext";
 
 const Conversation = ({conversation, emoji}) => {
   const {selectedConversation, setSelectedConversation} = useConversation()
 const isSelected = selectedConversation?._id === conversation._id
+const {onlineUsers} = useSocketContext();
+const isOnline = onlineUsers.includes(conversation._id)
+
   return (
       <div
         className={`sidebarHover d-flex rounded border-bottom border-secondary-subtle p-2 overflow-auto hover align-items-center ${isSelected ? "sidebarHoverSelect" : ""}` }
         role="button" onClick={()=>{setSelectedConversation(conversation)}}>
         <div className="d-inline-flex position-relative">
-          <MDBBadge className="position-absolute top-0 start-100 translate-middle p-1  bg-danger border border-light rounded-circle">
+          <MDBBadge className={`position-absolute top-0 start-100 translate-middle p-1 bg-${isOnline?"success": "danger"} border border-light rounded-circle`}>
             <span className="visually-hidden">New alerts</span>
           </MDBBadge>
           <img

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { LuSend } from "react-icons/lu";
 import useSendMessage from '../../hooks/useSendMessage';
+import Loader from '../loader/Loader';
 
 const Messageinput = () => {
 const[message, setMessage] = useState("")
@@ -20,9 +21,7 @@ const handleSubmit = async(e)=>{
        value={message}
        onChange={(e)=>setMessage(e.target.value)} /> 
       <button type='submit' className='btn position-absolute' id='sendMessageButton'>
-        {loading ?<div className="spinner-border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div> : <LuSend/>}
+        {loading ?<Loader/> : <LuSend/>}
         
         </button>
       </div>

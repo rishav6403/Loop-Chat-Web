@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import Message from "./Message";
 import useGetMessages from "../../hooks/useGetMessages";
-import MessageSkeleton from "../skeleton/messageSkeleton";
+import Loader from "../loader/Loader";
+import useListenMesaages from "../../hooks/useListenMesaages";
 
 const Messages = () => {
   const { messages, loading } = useGetMessages();
+  useListenMesaages();
   const lastMessageRef = useRef();
 
   useEffect(() => {
@@ -24,7 +26,7 @@ const Messages = () => {
           </div>
           ))}
 
-        {loading ? <MessageSkeleton /> : null}
+        {loading ? <Loader /> : null}
         {!loading && messages.length === 0 && (
           <p className="text-center text-white fw-bold">
             Send a message to start the conversation

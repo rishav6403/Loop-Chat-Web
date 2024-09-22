@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import GenderCheckBox from "./GenderCheckBox";
 import { useState } from "react";
 import useSignup from "../../hooks/useSignup";
+import Loader from "../../components/loader/Loader";
 
 const SignUp = () => {
   const [inputs, setInputs] = useState({
@@ -101,9 +102,7 @@ const SignUp = () => {
                   disabled={loading}
                 >
                   {loading ? (
-                    <div className="spinner-border" role="status">
-                      <span className="visually-hidden">Loading...</span>
-                    </div>
+                    <Loader/>
                   ) : (
                     "Sign Up"
                   )}
