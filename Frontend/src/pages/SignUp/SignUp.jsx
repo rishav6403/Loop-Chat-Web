@@ -101,11 +101,7 @@ const SignUp = () => {
                   className="btn btn-primary rounded-pill px-4 py-2"
                   disabled={loading}
                 >
-                  {loading ? (
-                    <Loader/>
-                  ) : (
-                    "Sign Up"
-                  )}
+                  {loading ? <Loader /> : "Sign Up"}
                 </button>
                 <Link to={"/login"}>Already have an accout?</Link>
               </div>
