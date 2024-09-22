@@ -3,8 +3,8 @@ import "./App.css";
 import Home from "./pages/Home/Home";
 import { Toaster } from "react-hot-toast";
 import { useAuthContext } from "./context/AuthContext";
-import SignUp from "./pages/signup/SignUp";
 import Login from "./pages/login/Login";
+import SignUp from "./pages/signup/SignUp";
 
 function App() {
   const { authUser } = useAuthContext();
