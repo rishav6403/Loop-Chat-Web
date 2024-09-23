@@ -16,11 +16,12 @@ const __dirname = path.resolve();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "/Frontend/dist")));
 
 app.use("/api/auth", authRoute);
 app.use("/api/messages", messagesRoute);
 app.use("/api/users", userRoute);
+
+app.use(express.static(path.join(__dirname, "/Frontend/dist")));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "Frontend", "dist", "index.html"));
