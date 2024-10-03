@@ -26,17 +26,17 @@ const SearchInput = () => {
   return (
     <>
       <form
-        className="d-flex justify-content-center gap-3 border-bottom border-dark-subtle py-4"
+        className="d-flex justify-content-around border-bottom border-dark-subtle py-4 w-100" id="searchForm"
         onSubmit={handleSubmit}
       >
         <input
           type="text"
-          className=" rounded-pill p-2"
+          className=" rounded-pill p-2 searchInput"
           placeholder="Search"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <button type="submit" className="p-2 rounded-circle">
+        <button className="btn border rounded-circle">
           <FcSearch size={25} />
         </button>
       </form>

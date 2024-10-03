@@ -15,13 +15,13 @@ const shakeClass = message.shouldShake? "shake" : '';
 
   return (
     <>
-     <div className="container mt-2">
+     <div className="mt-2">
   <div className={`chat-message ${chatClassName}`}>
     <div className="mssgBox d-flex">
       <div id="profileImage">
       <img
         src={profilePic}
-        className="rounded-circle"
+        className="rounded-circle img1"
         alt="Avatar"
         style={{width:"40px", height:"40px"}}
       />
