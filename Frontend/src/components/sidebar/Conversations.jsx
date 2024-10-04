@@ -9,7 +9,7 @@ const Conversations = () => {
   
   return (
     <>
-      <div className="mt-3 flex flex-column overflow-y-auto scroll-container" style={{ height: "58vh" }}>
+      <div className="mt-2 overflow-y-auto scroll-container">
     {conversations.map((conversation)=>(
         <Conversation 
         key={conversation._id}

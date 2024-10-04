@@ -14,9 +14,9 @@ const Sidebar = () => {
           <SearchInput />
           <Conversations />
         </div>
-        <div className="d-flex flex-column mt-3" id="logoutContainer">
+      
           <Logout />
-        </div>
+        
       </div>
     </>
   );

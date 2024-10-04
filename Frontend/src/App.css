@@ -121,6 +121,9 @@ h2 {
 .sidebarHoverSelect {
   background-color: #007bff;
 }
+.scroll-container{
+  height: 59vh;
+}
 
 /* resonsive */
 
@@ -180,12 +183,19 @@ h2 {
     margin-top: 8px;
     border: 0 !important;
   }
+  #logoutContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .scroll-container{
+    height: 57vh;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 425px) {
   #profileImage {
-    .img1,
-    #status {
+    .img1 {
       display: none;
     }
     .sidebarHover {
