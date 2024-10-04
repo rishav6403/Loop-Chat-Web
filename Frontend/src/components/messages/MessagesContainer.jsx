@@ -15,7 +15,7 @@ const MessagesContainer = () => {
   return (
     <>
       <div
-        className="d-flex flex-column justify-content-between w-100"
+        className="d-flex flex-column w-100"
         id="messagesContainer"
       >
         {!selectedConversation ? (
