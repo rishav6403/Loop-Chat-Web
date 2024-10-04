@@ -70,7 +70,7 @@ h2 {
   overflow: auto;
 }
 #messagesBox{
-  height: 70vh;
+  height: 69vh;
   padding-bottom: 10px;
 }
 .chat-message {
@@ -183,6 +183,9 @@ h2 {
   }
   #messagesContainer{
     border-left: 0;
+  }
+  #messagesBox {
+    height: 65vh;
   }
   #messageInputForm {
     padding: 0px 5px !important;
