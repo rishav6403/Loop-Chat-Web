@@ -47,6 +47,9 @@ h2 {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 3px solid rgba(17, 241, 55, 0.3);
 }
+#messagesContainer{
+  border-left: 0 !important;
+}
 #logoutContainer {
   margin-right: 250px;
 }
