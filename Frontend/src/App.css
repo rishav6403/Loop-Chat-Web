@@ -18,18 +18,11 @@ h2 {
   margin-bottom: 15px;
 }
 #Home-container {
-  #Home-container {
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
-    height: 100vh;           
-    width: 100vw;            
-    margin: 0;               
-    padding: 0;
-    box-sizing: border-box;  
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 #sideContainer {
   display: flex;
   flex-direction: column;
@@ -55,17 +48,22 @@ h2 {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 3px solid rgba(17, 241, 55, 0.3);
 }
-#messagesContainer{
+#messagesContainer {
   border-left: 0 !important;
 }
 #logoutContainer {
   margin-right: 250px;
 }
 #mssginput {
+  width: 90%;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  border: none;
   padding: 11px;
 }
 #sendMessageButton {
-  right: 30px;
+  right: 10px;
   cursor: pointer;
   color: gray;
   font-size: 25px;
@@ -77,15 +75,12 @@ h2 {
   height: 100%;
   overflow: auto;
 }
-#messagesBox{
+#messagesBox {
   height: 69vh;
   padding-bottom: 10px;
 }
 .chat-message {
   display: flex;
-  .mssgBox {
-    max-width: 80%;
-  }
 }
 
 .chat-end {
@@ -100,8 +95,13 @@ h2 {
   }
   .bubbleContainer {
     margin-right: 5px;
+    p {
+      margin: 0;
+      overflow-wrap: anywhere;
+    }
   }
   #chatbox {
+    max-width: 45vw;
     background-color: #007bff;
     color: honeydew;
   }
@@ -114,7 +114,14 @@ h2 {
     margin-top: 10px;
     margin-left: 5px;
   }
+  .bubbleContainer {
+    p {
+      margin: 0;
+      overflow-wrap: anywhere;
+    }
+  }
   #chatbox {
+    max-width: 45vw;
     background-color: rgb(255, 255, 255);
   }
 }
@@ -136,7 +143,7 @@ h2 {
 .sidebarHoverSelect {
   background-color: #007bff;
 }
-.scroll-container{
+.scroll-container {
   height: 59vh;
 }
 
@@ -146,11 +153,10 @@ h2 {
   .sidebarHover {
     flex-direction: column;
   }
-  #sidebarUsernameandImage{
+  #sidebarUsernameandImage {
     justify-content: center !important;
     text-align: center;
     margin-left: 0 !important;
-
   }
   #noChatSelected {
     padding: 2px;
@@ -172,10 +178,9 @@ h2 {
   }
   #sendMessageButton {
     right: -8px;
-    svg{
+    svg {
       font-size: 20px;
     }
-
   }
   .chat-message small {
     font-size: 11px;
@@ -189,7 +194,7 @@ h2 {
     flex-direction: column;
     padding-bottom: 5px;
   }
-  #messagesContainer{
+  #messagesContainer {
     border-left: 0;
   }
   #messagesBox {
@@ -198,21 +203,21 @@ h2 {
   #messageInputForm {
     padding: 0px 5px !important;
   }
-  #searchForm{
+  #searchForm {
     flex-direction: column;
     padding: 0 !important;
     margin-top: 10px;
   }
-  #searchForm button{
+  #searchForm button {
     margin-top: 8px;
     border: 0 !important;
   }
-  #logoutContainer{
+  #logoutContainer {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .scroll-container{
+  .scroll-container {
     height: 57vh;
   }
 }
@@ -230,5 +235,4 @@ h2 {
     padding-left: 3px;
     padding-right: 0;
   }
-  
 }

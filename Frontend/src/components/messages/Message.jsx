@@ -15,8 +15,7 @@ const shakeClass = message.shouldShake? "shake" : '';
 
   return (
     <>
-     <div className="mt-2">
-  <div className={`chat-message ${chatClassName}`}>
+  <div className={`mt-2 chat-message ${chatClassName}`}>
     <div className="mssgBox d-flex">
       <div id="profileImage">
       <img
@@ -27,14 +26,13 @@ const shakeClass = message.shouldShake? "shake" : '';
       />
       </div>
       <div className={`bubbleContainer d-flex flex-column ${shakeClass}`}>
-        <div className="px-2 pt-1 rounded-3 d-flex align-items-end" id="chatbox">
+        <div className="px-2 pt-1 rounded-3 d-flex flex-column align-items-end" id="chatbox">
           <p className="">{message.message}</p>
         <small className="text-muted">{formattedDateAndTime}</small>
         </div>
       </div>
     </div>
   </div>
-</div>
     </>
   );
 };
