@@ -17,7 +17,7 @@ const Messages = () => {
 
   return (
     <>
-      <div className="flex-1 overflow-auto w-100" style={{height:"72vh"}}>
+      <div className="flex-1 overflow-auto w-100" id="messagesBox">
         {!loading &&
           messages.length > 0 &&
           messages.map((message) => (
