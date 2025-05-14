@@ -6,23 +6,37 @@ import Loader from "../../components/loader/Loader";
 const Login = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-   
+
   const { loading, login } = useLogin();
 
   async function handleSubmit(e) {
     e.preventDefault();
-    await login({userName, password});
+    await login({ userName, password });
+  }
+  async function handleDemoLogin() {
+    setUserName("Demo@loopchat.com");
+    setPassword("12345678");
+    await login({ userName: "Demo@loopchat.com", password: "12345678" });
   }
   return (
     <>
       <div className="container" id="Login-container">
         <div className="row">
           <div className="col-sm-6 d-flex flex-column justify-content-center align-items-center">
-            <div id="heading">
+            <div id="heading" className="text-center">
               <h2>Login to Loop-Chat Account</h2>
-              <p className="fs-5 ">Enter your details</p>
+              <p className="fs-5">
+                Enter your details
+                <br />
+                <span className="text-muted small">
+                  Or use demo credentials: <br />
+                  <strong>Username:</strong> Demo@loopchat.com &nbsp;&nbsp;
+                  <strong>Password:</strong> 12345678
+                </span>
+              </p>
             </div>
           </div>
+
           <div className="col-sm-6  d-flex flex-column justify-content-center align-items-center">
             <form className="mt-4 w-100 px-4" onSubmit={handleSubmit}>
               <label htmlFor="username" className="font-semibold fs-5 ms-2">
@@ -52,15 +66,20 @@ const Login = () => {
               <div className=" d-flex justify-content-between align-items-center">
                 <button
                   className="btn btn-primary rounded-pill px-4 py-2 ms-2"
-                  disabled = {loading}
+                  disabled={loading}
                 >
-                  {loading ? (
-                    <Loader/>
-                  ) : (
-                    "Login"
-                  )}
+                  {loading ? <Loader /> : "Login"}
                 </button>
+                <button
+                type="button"
+                className="btn btn-outline-dark rounded-pill"
+                onClick={handleDemoLogin}
+                disabled={loading}
+              >
+                {loading ? "Logging in..." : "Login as Demo User"}
+              </button>
                 <Link to={"/signup"}>Didn't have an accout?</Link>
+                
               </div>
             </form>
           </div>
