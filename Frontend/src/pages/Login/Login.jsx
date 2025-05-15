@@ -34,6 +34,14 @@ const Login = () => {
                   <strong>Password:</strong> 12345678
                 </span>
               </p>
+              <button
+                type="button"
+                className="btn btn-outline-success border-dark text-dark rounded-pill"
+                onClick={handleDemoLogin}
+                disabled={loading}
+              >
+                {loading ? "Logging in..." : "→ Continue as Guest"}
+              </button>
             </div>
           </div>
 
@@ -70,16 +78,8 @@ const Login = () => {
                 >
                   {loading ? <Loader /> : "Login"}
                 </button>
-                <button
-                type="button"
-                className="btn btn-outline-dark rounded-pill"
-                onClick={handleDemoLogin}
-                disabled={loading}
-              >
-                {loading ? "Logging in..." : "Login as Demo User"}
-              </button>
+
                 <Link to={"/signup"}>Didn't have an accout?</Link>
-                
               </div>
             </form>
           </div>
